@@ -48,6 +48,7 @@
             this.btnUp = new System.Windows.Forms.Button();
             this.btnRight = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl00
@@ -60,6 +61,7 @@
             this.lbl00.Size = new System.Drawing.Size(51, 51);
             this.lbl00.TabIndex = 0;
             this.lbl00.Text = "0";
+            this.lbl00.Click += new System.EventHandler(this.lbl00_Click);
             // 
             // lbl01
             // 
@@ -71,6 +73,7 @@
             this.lbl01.Size = new System.Drawing.Size(51, 51);
             this.lbl01.TabIndex = 1;
             this.lbl01.Text = "0";
+            this.lbl01.Click += new System.EventHandler(this.lbl01_Click);
             // 
             // lbl02
             // 
@@ -115,6 +118,7 @@
             this.lbl12.Size = new System.Drawing.Size(51, 51);
             this.lbl12.TabIndex = 6;
             this.lbl12.Text = "0";
+            this.lbl12.Click += new System.EventHandler(this.lbl12_Click);
             // 
             // lbl11
             // 
@@ -126,6 +130,7 @@
             this.lbl11.Size = new System.Drawing.Size(51, 51);
             this.lbl11.TabIndex = 5;
             this.lbl11.Text = "0";
+            this.lbl11.Click += new System.EventHandler(this.lbl11_Click);
             // 
             // lbl10
             // 
@@ -148,6 +153,7 @@
             this.lbl23.Size = new System.Drawing.Size(51, 51);
             this.lbl23.TabIndex = 11;
             this.lbl23.Text = "0";
+            this.lbl23.Click += new System.EventHandler(this.lbl23_Click);
             // 
             // lbl22
             // 
@@ -159,6 +165,7 @@
             this.lbl22.Size = new System.Drawing.Size(51, 51);
             this.lbl22.TabIndex = 10;
             this.lbl22.Text = "0";
+            this.lbl22.Click += new System.EventHandler(this.lbl22_Click);
             // 
             // lbl21
             // 
@@ -192,6 +199,7 @@
             this.lbl33.Size = new System.Drawing.Size(51, 51);
             this.lbl33.TabIndex = 15;
             this.lbl33.Text = "0";
+            this.lbl33.Click += new System.EventHandler(this.lbl33_Click);
             // 
             // lbl32
             // 
@@ -203,6 +211,7 @@
             this.lbl32.Size = new System.Drawing.Size(51, 51);
             this.lbl32.TabIndex = 14;
             this.lbl32.Text = "0";
+            this.lbl32.Click += new System.EventHandler(this.lbl32_Click);
             // 
             // lbl31
             // 
@@ -266,11 +275,21 @@
             this.btnDown.UseVisualStyleBackColor = true;
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
-            // Form1
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(165, 276);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "lblScore =";
+            // 
+            // TwoZeroFourEightView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 428);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnRight);
             this.Controls.Add(this.btnUp);
@@ -291,9 +310,11 @@
             this.Controls.Add(this.lbl02);
             this.Controls.Add(this.lbl01);
             this.Controls.Add(this.lbl00);
-            this.Name = "Form1";
+            this.Name = "TwoZeroFourEightView";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.TwoZeroFourEightView_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -319,6 +340,7 @@
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Label label1;
     }
 }
 

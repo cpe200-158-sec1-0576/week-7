@@ -14,6 +14,7 @@ namespace twozerofoureight
     {
         Model model;
         Controller controller;
+        public static int score=4;
        
         public TwoZeroFourEightView()
         {
@@ -80,22 +81,84 @@ namespace twozerofoureight
         private void btnLeft_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
+            score += 2;
+            label1.Text = ToString();
         }
 
         private void btnRight_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.RIGHT);
+            score += 2;
+            label1.Text = ToString();
         }
 
         private void btnUp_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.UP);
+            score += 2;
+            label1.Text = ToString();
         }
 
         private void btnDown_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.DOWN);
+            score += 2;
+            label1.Text = ToString() ;
         }
 
+        public override string ToString()
+        {
+            return "" + score + "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void TwoZeroFourEightView_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void lbl12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl00_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl01_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl32_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
