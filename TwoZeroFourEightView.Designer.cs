@@ -49,6 +49,7 @@
             this.btnRight = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl00
@@ -96,6 +97,7 @@
             this.lbl03.Size = new System.Drawing.Size(51, 51);
             this.lbl03.TabIndex = 3;
             this.lbl03.Text = "0";
+            this.lbl03.Click += new System.EventHandler(this.lbl03_Click);
             // 
             // lbl13
             // 
@@ -284,11 +286,21 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "lblScore =";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(225, 276);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "4";
+            // 
             // TwoZeroFourEightView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 428);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnRight);
@@ -341,6 +353,7 @@
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

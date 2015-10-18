@@ -14,13 +14,16 @@ namespace twozerofoureight
     {
         Model model;
         Controller controller;
-        public static int score=4;
        
         public TwoZeroFourEightView()
         {
             InitializeComponent();
+            ScoreView sc = new ScoreView();
+            sc.Visible = true;
+            sc.Enabled = true;
             model = new TwoZeroFourEightModel();
             model.AttachObserver(this);
+            model.AttachObserver(sc);
             controller = new TwoZeroFourEightController();
             controller.AddModel(model);
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
@@ -28,7 +31,7 @@ namespace twozerofoureight
 
         public void Notify(Model m)
         {
-            UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
+            UpdateBoard(((TwoZeroFourEightModel)m).GetBoard());
         }
 
         private void UpdateTile(Label l, int i)
@@ -76,39 +79,31 @@ namespace twozerofoureight
             UpdateTile(lbl31,board[3, 1]);
             UpdateTile(lbl32,board[3, 2]);
             UpdateTile(lbl33,board[3, 3]);
+            label2.Text = ((TwoZeroFourEightModel)model)._score.ToString();
         }
 
         private void btnLeft_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.LEFT);
-            score += 2;
-            label1.Text = ToString();
+       
         }
 
         private void btnRight_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.RIGHT);
-            score += 2;
-            label1.Text = ToString();
+        
         }
 
         private void btnUp_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.UP);
-            score += 2;
-            label1.Text = ToString();
+          
         }
 
         private void btnDown_Click(object sender, EventArgs e)
         {
             controller.ActionPerformed(TwoZeroFourEightController.DOWN);
-            score += 2;
-            label1.Text = ToString() ;
-        }
-
-        public override string ToString()
-        {
-            return "" + score + "";
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -157,6 +152,11 @@ namespace twozerofoureight
         }
 
         private void lbl32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl03_Click(object sender, EventArgs e)
         {
 
         }
